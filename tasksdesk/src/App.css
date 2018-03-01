@@ -1,0 +1,358 @@
+.App {
+  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+main, .form-wrapper {
+  border-radius: 2px;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-shadow: -1px 3px 10px 0px rgba(0,0,0,0.75);
+}
+
+header {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Philosopher', sans-serif;
+  background: linear-gradient(
+    135deg, 
+    rgba(9,23,73,1) 0%,
+    rgb(45, 23, 74) 34%,
+    rgb(64, 22, 97) 68%,
+    rgb(64, 16, 84) 100%
+  );
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header>h1 {
+  color: white;
+}
+
+.btn-menu {
+  /* min-height: 40px; */
+  width: 100%;
+  background: linear-gradient(
+    15deg, 
+    rgba(9,23,73,1) 0%,
+    rgb(45, 23, 74) 34%,
+    rgb(64, 22, 97) 68%,
+    rgb(64, 16, 84) 100%
+  );
+  border-radius: 0 0 3px 3px;
+}
+/* Блок миссий */
+
+
+/* .todo-list:after{
+  content: '';
+  display: block;
+  height: 40px;
+
+} */
+.todo-list {
+  overflow: hidden;
+}
+
+.todo button:not(.checkbox) {
+  opacity: 0;
+  transition: all .2s;
+}
+
+.todo:hover button:not(.checkbox) {
+  opacity: 1;
+}
+
+.todo, .todo-editing-form {
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-top: 1px solid rgba(0,0,0,.1);
+  font-family: 'Roboto', 'Arial', 'Sans-serif';
+  min-height: 70px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.todo-title, .editing-form {
+  margin-right: auto;
+}
+
+.todo.completed * {
+  color: lightgray;
+}
+
+.todo.completed .todo-title {
+  text-decoration: line-through;
+}
+
+
+.todo .checkbox {
+  margin-right: .5rem;
+}
+
+.todo button:not(.checkbox) {
+  opacity: 0;
+  transition: all .2s;
+}
+
+.todo:hover button:not(.checkbox) {
+  opacity: 1;
+}
+
+/* Форма редактирования */
+.todo-editing-form{
+  padding: 0;
+}
+
+
+.editing-form{
+  padding-left: 10px;
+  font-family: 'Roboto', 'Arial', 'Sans-serif';
+  font-weight: 400;
+  font-size: 1.2rem;
+  min-height: 70px;
+  border: none;
+  min-width: 99%;
+  
+}
+
+.todo-editing-form input:focus {
+  border: 1px solid  #a91dfa;
+  
+}
+
+.btn-edit{
+  left: -39px;
+}
+/* Кнопки */
+
+button {
+  position: relative;
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+
+button:hover {
+  background-color: rgba(158,158,158,.2);
+}
+
+
+button:active {
+  background-color: rgba(158,158,158,.4);
+}
+
+button.icon {
+  border-radius: 50%;
+  font-size: 24px;
+  height: 32px;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 32px;
+  width: 32px;
+  padding: 0;
+  overflow: hidden;
+  line-height: normal;
+}
+
+
+button .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-12px,-12px);
+  line-height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+.timer-btn{
+  color: rgba(255, 255, 255, 0.801);
+  margin: 4px;
+}
+/* Статистика */
+
+.stats {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  /* font-family: 'Roboto', 'Arial Narrow', Arial; */
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 1.16rem;
+}
+
+table {
+  width: 100%;
+}
+
+tbody {
+  margin: 0 auto;
+  max-width: 90%;
+  border-top: 1px solid rgba(249, 245, 245, 0.24);
+  display: flex;
+  justify-content: space-around;
+}
+td {
+  padding-left: 3px;
+}
+
+
+/* Форма отправки */
+
+
+.form-wrapper {
+  margin-top: 50px;
+}
+
+.todo-form:before {
+  border-radius: 5px 5px 0 0;
+  content: '';
+  display: block;
+  height: 40px;
+  
+  background: linear-gradient(
+    5deg, 
+    rgba(9,23,73,1) 0%,
+    rgb(45, 23, 74) 34%,
+    rgb(64, 22, 97) 68%,
+    rgb(64, 16, 84) 100%
+  );
+}
+
+/* .todo-form {
+  background-color: #FAFAFA;
+} */
+
+.todo-form>* {
+  height: 50px;
+  font-family: 'Roboto';
+  font-size: 1rem;
+}
+
+.todo-form>input {
+  border: none;
+  padding: 0;
+  width: 80%;
+  outline: none;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.todo-form input:focus {
+  border: 1px solid #8354f0;
+}
+
+.todo-form>button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.13rem;
+  width: 19.8%;
+  border-left: 1px solid rgba(0,0,0,.1);
+  padding: 0
+}
+
+/* Таймер */
+
+.timer-wrp{
+  
+
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: -1px 3px 10px 0px rgba(0,0,0,0.75);
+  justify-content: center;
+  background: linear-gradient(
+    5deg, 
+    rgba(9,23,73,1) 0%,
+    rgb(45, 23, 74) 34%,
+    rgb(64, 22, 97) 68%,
+    rgb(64, 16, 84) 100%
+  );
+}
+
+.timer-wrp>div{
+  margin: 0 3% 0 3%;
+}
+
+.btn-box button>i {
+  color: white;
+}
+
+.timer{
+  color: white;
+  font-size: 32px;
+  font-family: 'Kavivanar';
+}
+
+/* Анимации */
+
+.slide-enter {
+  transform: translateX(-100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  will-change: transform;
+  transition: all 500ms ;
+}
+
+.slide-exit {
+  transform: translateX(0);
+}
+
+.slide-exit.slide-exit-active {
+  transform: translateX(+100%);
+  transition: all 300ms ;
+  will-change: transform;
+}
+
+.slide-appear {
+  opacity: 0;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.show-enter {
+  opacity: 1;
+}
+
+.show-enter.show-enter-active {
+  opacity: 1;
+  
+  transition: all 500ms ;
+}
+
+.show-exit {
+  opacity: 1;
+}
+
+.show-exit.show-exit-active {
+  opacity: 0;
+  transition: all 500ms ;
+}
+
+.show-appear {
+  opacity: 0;
+}
+
+.show-appear.show-appear-active {
+  opacity: 1;
+  transition: all 500ms;
+}
